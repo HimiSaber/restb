@@ -9,7 +9,7 @@ import javax.ws.rs.PathParam;
 import javax.ws.rs.Produces;
 import javax.ws.rs.WebApplicationException;
 
-//import com.rest.Student.Builder;
+
 
 
 @Path("/v1/student")
@@ -22,10 +22,7 @@ public class StudentsRestlet {
 	public List<Student> students(){
 		
 		return Arrays.asList(
-				stu1,stu2
-				//Student.Builder.newBuilder().id(1).name("zhangsan").sex("man").age(23).build(),
-				//Student.Builder.newBuilder().id(2).name("lisi").sex("women").age(21).build()
-				
+				stu1,stu2			
 				);
 	
 	}
@@ -37,10 +34,8 @@ public class StudentsRestlet {
 		switch(id) {
 		case 1:
 			return stu1;
-			//Student.Builder.newBuilder().id(1).name("zhangsan").sex("man").age(23).build();
 		case 2:
 			return stu2;
-			//Student.Builder.newBuilder().id(2).name("lisi").sex("women").age(21).build();
 		default:
 			throw new WebApplicationException("Stack not found, id: " + id, 404);
 		}
